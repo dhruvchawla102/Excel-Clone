@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Excel Clone</title>
+</head>
+
+<body>
+    <div class="header">
+        <ul>
+            <li>Home</li>
+            <li>Insert</li>
+            <li>View</li>
+            <li>Help</li>
+        </ul>
+        <div class="title">
+            <i class="fa-regular fa-file-excel" style="font-size: 25px;"></i>
+            Excel Clone
+        </div>
+    </div>
+    <div class="menu-cont">
+        <div class="font-style">
+            <div class="bold"><i class="fa-solid fa-bold"></i></div>
+            <div class="italic"><i class="fa-solid fa-italic"></i></div>
+            <div class="underline"><i class="fa-solid fa-underline"></i></div>
+        </div>
+        <div class="horizontal-align">
+            <div class="left active-menu-option"><i class="fa-solid fa-align-left"></i></div>
+            <div class="center"><i class="fa-solid fa-align-center"></i></div>
+            <div class="right"><i class="fa-solid fa-align-right"></i></div>
+        </div>
+        <div class="font-option">
+            <select id="font-family">
+                <option style="font-family:Arial" value="Arial">Arial</option>
+                <option style="font-family:Calibri" value="Calibri">Calibri</option>
+                <option style="font-family:Comic Sans MS" value="Comic Sans MS">Comic Sans MS</option>
+                <option style="font-family:Courier New" value="Courier New">Courier New</option>
+                <option style="font-family:Garamond" value="Garamond">Garamond</option>
+                <option style="font-family:Georgia" value="Georgia">Georgia</option>
+                <option style="font-family:Impact" value="Impact">Impact</option>
+                <option style="font-family:Noto Sans" value="Noto Sans">Noto Sans</option>
+                <option style="font-family:'Times New Roman', Times, serif" value="Times New Roman" selected>Times New
+                    Roman</option>
+                <option style="font-family:Verdana" value="Verdana">Verdana</option>
+            </select>
+            <select id="font-size">
+                <option value="12">12</option>
+                <option value="14" selected>14</option>
+                <option value="16">16</option>
+                <option value="18">18</option>
+                
+                
+                
+            </select>
+        </div>
+        
+            
+            <div class="color-option">
+                <div class="fill-color">
+                    <i class="fa-solid fa-fill-drip"></i>
+                    <input type="color" id="fill-color-palette" value="#ffffff">
+                </div>
+                <div class="text-color" id="text-color">
+                    <i class="fa-solid fa-font"></i>
+                    <input type="color" id="text-color-palette">
+                </div>
+                
+            </div>
+        
+    </div>
+
+    <div class="address-cont">
+        <input type="text" id="address-bar" disabled>
+        <input type="text" id="formula-bar" placeholder="fx">
+    </div>
+    <div class="cell-cont"></div>
+    <div class="sheets-cont">
+        <div class="add-sheet">
+            <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="sheet-list">
+            <div class="sheet active-sheet" sheetId='0'>Sheet1</div>
+        </div>
+    </div>
+
+
+    <script src="./menu.js"></script>
+    <script src="./sheet.js"></script>
+    <script src="./init.js"></script>
+    <script src="./util.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
